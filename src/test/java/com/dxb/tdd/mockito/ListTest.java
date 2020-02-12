@@ -25,7 +25,7 @@ public class ListTest {
         //重置mock
         reset(mockList);
         //还有这种操作
-        when(mockList.get(0)).thenReturn(1).thenReturn(2).thenReturn(3);
+        when(mockList.get(0)).thenReturn(1).thenReturn(2).thenReturn(3,4);
         //模拟连续调用返回期望值，如果分开，则只有最后一个有效
         when(mockList.get(2)).thenReturn(1);
         when(mockList.get(2)).thenReturn(2);
@@ -36,8 +36,9 @@ public class ListTest {
         assertEquals(1, mockList.get(0));
         assertEquals(2, mockList.get(0));
         assertEquals(3, mockList.get(0));
-        assertEquals(3, mockList.get(0));
-        assertEquals(3, mockList.get(0));
+        assertEquals(4, mockList.get(0));
+        assertEquals(4, mockList.get(0));
+        assertEquals(4, mockList.get(0));
         //模拟连续调用返回期望值，如果分开，则只有最后一个有效
         assertEquals(2, mockList.get(2));
 
