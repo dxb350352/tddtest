@@ -1,4 +1,4 @@
-package com.dxb.tdd.mockito;
+package com.dxb.tdd.mockito.ppt;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -30,12 +30,9 @@ public class AnswerTest {
     @Test
     public void answer_with_callback() {
         //使用Answer来生成我们我们期望的返回
-        when(mockList.get(anyInt())).thenAnswer(new Answer<Object>() {
-            @Override
-            public Object answer(InvocationOnMock invocation) throws Throwable {
-                Object[] args = invocation.getArguments();
-                return "hello world:" + args[0];
-            }
+        when(mockList.get(anyInt())).thenAnswer(invocation -> {
+            Object[] args = invocation.getArguments();
+            return "hello world:" + args[0];
         });
         assertEquals("hello world:0", mockList.get(0));
         assertEquals("hello world:999", mockList.get(999));

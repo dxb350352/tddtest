@@ -25,7 +25,7 @@ if (system.args.length !== 2) {
         response.close();
     });
     if (!listening) {
-        console.log("could not create web server listening on port " + port);
+        console.log("could not create ppt server listening on port " + port);
         phantom.exit();
     }
     var url = "http://localhost:" + port + "/foo/bar.php?asdf=true";

@@ -1,4 +1,4 @@
-package com.dxb.tdd.mockito;
+package com.dxb.tdd.mockito.ppt;
 
 import org.junit.Test;
 

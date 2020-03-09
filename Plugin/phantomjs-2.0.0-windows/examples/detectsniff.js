@@ -1,4 +1,4 @@
-// Detect if a web page sniffs the user agent or not.
+// Detect if a ppt page sniffs the user agent or not.
 
 var page = require('webpage').create(),
     system = require('system'),

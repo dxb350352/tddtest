@@ -13,21 +13,21 @@ import static com.codeborne.selenide.Selenide.$;
 public class ChromeTest {
 
     public static void main(String[] args) {
-        WebDriver webDriver = null;
-        try {
-            webDriver = WebDriverUtil.createChromeWebDriver("D:\\ProgramFiles\\IdeaProjects\\tddtest\\Plugin\\chromedriver.exe");
-            webDriver.get("https://www.baidu.com/");
-            System.out.println(webDriver.getTitle());
-            $("#kw").setValue("phantomjs");
-            $("#su").click();
-            Thread.sleep(2222);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (webDriver != null) {
-                webDriver.close();
-            }
-        }
+//        WebDriver webDriver = null;
+//        try {
+//            webDriver = WebDriverUtil.createChromeWebDriver("D:\\ProgramFiles\\IdeaProjects\\tddtest\\Plugin\\chromedriver.exe");
+//            webDriver.get("https://www.baidu.com/");
+//            System.out.println(webDriver.getTitle());
+//            $("#kw").setValue("phantomjs");
+//            $("#su").click();
+//            Thread.sleep(2222);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        } finally {
+//            if (webDriver != null) {
+//                webDriver.close();
+//            }
+//        }
     }
 
 

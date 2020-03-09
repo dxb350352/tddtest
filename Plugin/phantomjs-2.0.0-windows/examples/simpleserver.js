@@ -23,7 +23,7 @@ if (system.args.length !== 2) {
         response.write('<title>Hello, world!</title>');
         response.write('</head>');
         response.write('<body>');
-        response.write('<p>This is from PhantomJS web server.</p>');
+        response.write('<p>This is from PhantomJS ppt server.</p>');
         response.write('<p>Request data:</p>');
         response.write('<pre>');
         response.write(JSON.stringify(request, null, 4));
@@ -36,7 +36,7 @@ if (system.args.length !== 2) {
     if (service) {
         console.log('Web server running on port ' + port);
     } else {
-        console.log('Error: Could not create web server listening on port ' + port);
+        console.log('Error: Could not create ppt server listening on port ' + port);
         phantom.exit();
     }
 }
